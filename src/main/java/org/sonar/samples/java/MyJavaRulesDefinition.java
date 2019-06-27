@@ -35,7 +35,6 @@ import org.sonar.api.server.rule.RulesDefinition;
 import org.sonar.api.server.rule.RulesDefinitionAnnotationLoader;
 import org.sonar.api.utils.AnnotationUtils;
 import org.sonar.check.Cardinality;
-import org.sonar.plugins.java.Java;
 import org.sonar.squidbridge.annotations.RuleTemplate;
 
 import com.google.common.annotations.VisibleForTesting;
@@ -60,7 +59,7 @@ public class MyJavaRulesDefinition implements RulesDefinition {
   @Override
   public void define(Context context) {
     NewRepository repository = context
-      .createRepository(REPOSITORY_KEY, Java.KEY)
+      .createRepository(REPOSITORY_KEY, "java")
       .setName("DCITS自定义Java规则");
 
     List<Class> checks = RulesList.getChecks();
