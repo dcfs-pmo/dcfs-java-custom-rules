@@ -36,6 +36,7 @@ import org.sonar.samples.java.checks.DcitsUndocumentedApiContainAuthorRule;
 import org.sonar.samples.java.checks.GalaxyUndocumentedApiContainAuthorRule;
 
 import com.google.common.collect.ImmutableList;
+import org.sonar.samples.java.checks.galaxy.GalaxySpringBeanAvoidNonFinalVariablesRule;
 
 public final class RulesList {
 
@@ -59,6 +60,7 @@ public final class RulesList {
       .add(GalaxyUndocumentedApiRule.class)
       .add(DcitsUndocumentedApiContainAuthorRule.class)
       .add(GalaxyUndocumentedApiContainAuthorRule.class)
+      .add(GalaxySpringBeanAvoidNonFinalVariablesRule.class)
       .build();
   }
 

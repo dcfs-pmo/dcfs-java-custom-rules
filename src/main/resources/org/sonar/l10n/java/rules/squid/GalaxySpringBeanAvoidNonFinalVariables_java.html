@@ -1,0 +1,36 @@
+<p>新核心应用不允许在服务Bean中声明非Final成员变量</p>
+<h2>Code Example</h2>
+<pre>
+新核心应用不允许在服务Bean中声明非Final成员变量
+Spring容器默认为单实例模式，多线程运行的时不安全，产生串值问题。
+@Component
+public class test{
+    int a ;
+    String b = "AAA";
+    int m1(String var1 ,int var2){
+        a=0;
+        if(var1.equals(b)){
+            a=a+var2;
+        }
+        return a;
+    }
+}
+</pre>
+<h2>Compliant Solution</h2>
+<pre>
+推荐使用方式：
+    1. 增加Final修饰符;
+    2. 使用局部变量替换;
+    3. 必要情况下使用ThreadLocal;
+@Component
+public class test{
+    static final String b = "AAA";
+    int m1(String var1 ,int var2){
+        int a=0;
+        if(var1.equals(b)){
+            a=a+var2;
+        }
+        return a;
+    }
+}
+</pre>

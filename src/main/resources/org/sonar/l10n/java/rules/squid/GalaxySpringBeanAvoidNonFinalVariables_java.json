@@ -1,0 +1,15 @@
+{
+  "title": "Galaxy Spring Service Bean Should Not Have Non Final Variable.",
+  "type": "VULNERABILITY",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "5min"
+  },
+  "tags": [
+    "spring",
+    "security",
+    "galaxy"
+  ],
+  "defaultSeverity": "Critical"
+}

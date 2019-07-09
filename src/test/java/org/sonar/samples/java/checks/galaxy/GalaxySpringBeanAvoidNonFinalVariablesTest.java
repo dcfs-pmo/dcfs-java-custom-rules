@@ -17,17 +17,22 @@
  * along with this program; if not, write to the Free Software Foundation,
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
-package org.sonar.samples.java.checks;
+package org.sonar.samples.java.checks.galaxy;
 
 import org.junit.Test;
 import org.sonar.java.checks.verifier.JavaCheckVerifier;
 
-public class DcitsUndocumentedApiCheckTest {
+public class GalaxySpringBeanAvoidNonFinalVariablesTest {
+
   @Test
   public void detected() {
+
+    // Use an instance of the check under test to raise the issue.
+    GalaxySpringBeanAvoidNonFinalVariablesRule check = new GalaxySpringBeanAvoidNonFinalVariablesRule();
+
     // Verifies that the check will raise the adequate issues with the expected message.
     // In the test file, lines which should raise an issue have been commented out
     // by using the following syntax: "// Noncompliant {{EXPECTED_MESSAGE}}"
-//    JavaCheckVerifier.verify ("src/test/files/DcitsUndocumentedApiCheck.java", new DcitsUndocumentedApiRule());
+    JavaCheckVerifier.verify("src/test/files/GalaxySpringBeanAvoidNonFinalVariablesCheck.java", check);
   }
 }
