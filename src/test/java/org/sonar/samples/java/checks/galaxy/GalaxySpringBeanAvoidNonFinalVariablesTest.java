@@ -22,7 +22,7 @@ package org.sonar.samples.java.checks.galaxy;
 import org.junit.Test;
 import org.sonar.java.checks.verifier.JavaCheckVerifier;
 
-public class GalaxySpringBeanAvoidNonFinalVariables {
+public class GalaxySpringBeanAvoidNonFinalVariablesTest {
 
   @Test
   public void detected() {
