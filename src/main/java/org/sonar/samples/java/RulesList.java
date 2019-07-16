@@ -32,6 +32,7 @@ import org.sonar.samples.java.checks.DontUseErrorObjectRule;
 import org.sonar.samples.java.checks.DontUseErrorValueRule;
 import org.sonar.samples.java.checks.DontUseTotalDataRule;
 import org.sonar.samples.java.checks.GalaxyUndocumentedApiRule;
+import org.sonar.samples.java.checks.CollectionAndMapNullValueRule;
 import org.sonar.samples.java.checks.DcitsUndocumentedApiContainAuthorRule;
 import org.sonar.samples.java.checks.GalaxyUndocumentedApiContainAuthorRule;
 
@@ -61,6 +62,7 @@ public final class RulesList {
       .add(DcitsUndocumentedApiContainAuthorRule.class)
       .add(GalaxyUndocumentedApiContainAuthorRule.class)
       .add(GalaxySpringBeanAvoidNonFinalVariablesRule.class)
+      .add(CollectionAndMapNullValueRule.class)
       .build();
   }
 
