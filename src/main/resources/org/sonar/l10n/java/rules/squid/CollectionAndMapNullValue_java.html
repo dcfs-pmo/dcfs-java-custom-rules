@@ -1,0 +1,14 @@
+<p>空指针异常</p>
+<h2>Code Example</h2>
+<pre>
+从集合或者map取值后 要做非空判断连续调用，存在空指针风险
+例1
+			map.get(key).toString();
+			list.get(i).toString(); 
+			list.get(i).equals(map);
+</pre>
+<h2>Compliant Solution</h2>
+<pre>
+   为了避免空指针风险，建议对 map.get(key)和 list.get(i)做非空判断
+</pre>
+
