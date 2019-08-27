@@ -148,7 +148,7 @@ public class GalaxySpringBeanAvoidNonFinalVariablesRule extends BaseTreeVisitor 
     if(interfaces!= null && !interfaces.isEmpty()){
       for (Type anInterface : interfaces) {
         //指标类忽略 5.30版本改造内容
-        if("com.dcits.ensemble.product.api.application.IProductPar".equals(anInterface.fullyQualifiedName())){
+        if("com.dcits.ensemble.product.api.application.IProductPart".equals(anInterface.fullyQualifiedName())){
           isIgoreImpls = true;
           break;
         }
